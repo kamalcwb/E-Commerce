@@ -32,6 +32,7 @@ const Title = styled.h1`
 `;
 
 const Button = styled.button`
+    font-size: 11px;
     border:none;
     padding: 10px;
     background-color: white;
@@ -46,7 +47,7 @@ const CategoryItem = ({ item }) => {
             <Image src={item.img} />
             <Info>
                 <Title>{item.title}</Title>
-                <Button>SHOP NOW</Button>
+                <Button>COMPRE AGORA</Button>
             </Info>
         </Container>
     );
