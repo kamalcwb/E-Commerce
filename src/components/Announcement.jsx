@@ -15,7 +15,7 @@ const Container = styled.div`
 const Announcement = () => {
     return (
         <Container>
-            Super Promoção 50% OFF
+            INSCREVA-SE PARA ATUALIZAÇÕES EXCLUSIVAS
         </Container>
     )
 }

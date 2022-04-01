@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import { Send } from "@material-ui/icons";
+import styled from "styled-components";
 
 const Container = styled.div`
   height: 60vh;
@@ -18,7 +18,6 @@ const Desc = styled.div`
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 20px;
-
 `;
 
 const InputContainer = styled.div`
@@ -44,16 +43,18 @@ const Button = styled.button`
 `;
 
 const Newsletter = () => {
-    return (
-        <Container>
-            <Title></Title>
-            <Desc></Desc>
-            <InputContainer>
-                <Input />
-                <Button></Button>
-            </InputContainer>
-        </Container>
-    )
-}
+  return (
+    <Container>
+      <Title>ENTRE NO MUNDO BRANCA DE NEVE</Title>
+      <Desc>Saiba sobre eventos exclusivos, coleções e novidades.</Desc>
+      <InputContainer>
+        <Input placeholder="Seu E-Mail" />
+        <Button>
+          <Send />
+        </Button>
+      </InputContainer>
+    </Container>
+  );
+};
 
-export default Newsletter
+export default Newsletter;
