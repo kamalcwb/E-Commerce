@@ -86,14 +86,12 @@ const Footer = () => {
             <Left>
                 <Logo>BdN</Logo>
                 <Desc>
-                    Fundada em 2018, a Branca de Neve é uma casa de design de moda.
+                    Fundada em 2018, a Branca de Neve é uma loja de design de moda.
                     Sob a Direção de Ana Laura Menegueti desde sua fundação, a BdN  distribui produtos de moda e lifestyle,
-                    incluindo alta costura, pronto-a-vestir feminino e masculino, joias, relógios, acessórios, fragrâncias e coleção
-                    para casa.
+                    incluindo alta costura, pronto-a-vestir feminino e masculino, joias, relógios, acessórios e fragrâncias.
 
                     A marca Branca de Neve representa a moda brasileira, inovação na moda, design icônico e dedicação ao luxo excepcional.
-                    A BdN acredita no empoderamento, motivação e crescimento de todos os funcionários. Sentimo-nos fortemente na
-                    família como parte do nosso DNA.
+                    A BdN acredita no empoderamento, motivação e crescimento de todos os funcionários.
                 </Desc>
                 <SocialContainer>
                     <SocialIcon color="3B5999">
