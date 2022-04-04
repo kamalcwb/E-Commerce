@@ -40,7 +40,7 @@ const ProductList = () => {
             <Title>Vestidos</Title>
             <FilterContainer>
                 <Filter>
-                    <FilterText>Filter Products:</FilterText>
+                    <FilterText>Filtrar Produtos:</FilterText>
                     <Select>
                         <Option disabled selected>
                             Cor
