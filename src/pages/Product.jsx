@@ -4,12 +4,14 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
+  ${mobile({ padding: "10px", flexDirection: "column" })}
 `;
 
 const ImgContainer = styled.div`
@@ -20,11 +22,13 @@ const Image = styled.img`
   width: 100%;
   height: 90vh;
   object-fit: cover;
+  ${mobile({ height: "40vh" })}
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0px 50px;
+  ${mobile({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
@@ -45,6 +49,7 @@ const FilterContainer = styled.div`
   margin: 30px 0px;
   display: flex;
   justify-content: space-between;
+  ${mobile({ width: "100%" })}
 `;
 
 const Filter = styled.div`
@@ -78,6 +83,7 @@ const AddContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({ width: "100%" })}
 `;
 
 const AmountContainer = styled.div`
@@ -110,63 +116,63 @@ const Button = styled.button`
 `;
 
 const Product = () => {
-    return (
-        <Container>
-            <Navbar />
-            <Announcement />
-            <Wrapper>
-                <ImgContainer>
-                    <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>Macacão Jeans Delavê Denim Claro</Title>
-                    <Desc>
-                        Macacão confeccionado em jeans com lavagem delavê. Modelo sem manga, conta com decote reto,
-                        fechamento frontal por botões, alças com amarração, bolsos frontais e bolsos posteriores. Cheio de estilo,
-                        é perfeito para compor looks super descolados. <br /><br />
-                        • Bolsos frontais <br /><br />
-                        • Alças ajustáveis <br /><br />
-                        <strong>JEANS + TRANSPARENTE</strong> <br /><br />
-                        <strong>O futuro está em nossas mãos.</strong> O <strong>Jeans + Transparente </strong>
-                        representa o início de um novo capítulo na <strong>história</strong> de um ícone da moda. <br /> A responsabilidade
-                        com o <strong>meio ambiente</strong> e suas comunidades é o que guia a criação de cada peça.
-                        Para produzir cada vez <strong>melhor</strong>, preservamos cada vez mais nossos
-                        <strong>recursos naturais</strong>. Esse é o jeito de fazer <strong>moda</strong> em que acreditamos:
-                        Nossa forma de <strong>abraçar o planeta</strong> e as gerações que estão por vir.
-                    </Desc>
-                    <Price>R$ 159,90</Price>
-                    <FilterContainer>
-                        <Filter>
-                            <FilterTitle>Cor</FilterTitle>
-                            <FilterColor color="black" />
-                            <FilterColor color="darkblue" />
-                            <FilterColor color="gray" />
-                        </Filter>
-                        <Filter>
-                            <FilterTitle>Tamanho</FilterTitle>
-                            <FilterSize>
-                                <FilterSizeOption>PP</FilterSizeOption>
-                                <FilterSizeOption>P</FilterSizeOption>
-                                <FilterSizeOption>M</FilterSizeOption>
-                                <FilterSizeOption>G</FilterSizeOption>
-                                <FilterSizeOption>GG</FilterSizeOption>
-                            </FilterSize>
-                        </Filter>
-                    </FilterContainer>
-                    <AddContainer>
-                        <AmountContainer>
-                            <Remove />
-                            <Amount>1</Amount>
-                            <Add />
-                        </AmountContainer>
-                        <Button>ADICIONAR AO CARRINHO</Button>
-                    </AddContainer>
-                </InfoContainer>
-            </Wrapper>
-            <Newsletter />
-            <Footer />
-        </Container>
-    );
+  return (
+    <Container>
+      <Navbar />
+      <Announcement />
+      <Wrapper>
+        <ImgContainer>
+          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+        </ImgContainer>
+        <InfoContainer>
+          <Title>Macacão Jeans Delavê Denim Claro</Title>
+          <Desc>
+            Macacão confeccionado em jeans com lavagem delavê. Modelo sem manga, conta com decote reto,
+            fechamento frontal por botões, alças com amarração, bolsos frontais e bolsos posteriores. Cheio de estilo,
+            é perfeito para compor looks super descolados. <br /><br />
+            • Bolsos frontais <br /><br />
+            • Alças ajustáveis <br /><br />
+            <strong>JEANS + TRANSPARENTE</strong> <br /><br />
+            <strong>O futuro está em nossas mãos.</strong> O <strong>Jeans + Transparente </strong>
+            representa o início de um novo capítulo na <strong>história</strong> de um ícone da moda. <br /> A responsabilidade
+            com o <strong>meio ambiente</strong> e suas comunidades é o que guia a criação de cada peça.
+            Para produzir cada vez <strong>melhor</strong>, preservamos cada vez mais nossos
+            <strong>recursos naturais</strong>. Esse é o jeito de fazer <strong>moda</strong> em que acreditamos:
+            Nossa forma de <strong>abraçar o planeta</strong> e as gerações que estão por vir.
+          </Desc>
+          <Price>R$ 159,90</Price>
+          <FilterContainer>
+            <Filter>
+              <FilterTitle>Cor</FilterTitle>
+              <FilterColor color="black" />
+              <FilterColor color="darkblue" />
+              <FilterColor color="gray" />
+            </Filter>
+            <Filter>
+              <FilterTitle>Tamanho</FilterTitle>
+              <FilterSize>
+                <FilterSizeOption>PP</FilterSizeOption>
+                <FilterSizeOption>P</FilterSizeOption>
+                <FilterSizeOption>M</FilterSizeOption>
+                <FilterSizeOption>G</FilterSizeOption>
+                <FilterSizeOption>GG</FilterSizeOption>
+              </FilterSize>
+            </Filter>
+          </FilterContainer>
+          <AddContainer>
+            <AmountContainer>
+              <Remove />
+              <Amount>1</Amount>
+              <Add />
+            </AmountContainer>
+            <Button>ADICIONAR AO CARRINHO</Button>
+          </AddContainer>
+        </InfoContainer>
+      </Wrapper>
+      <Newsletter />
+      <Footer />
+    </Container>
+  );
 };
 
 export default Product;
