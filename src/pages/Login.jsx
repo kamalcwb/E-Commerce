@@ -61,7 +61,7 @@ const Login = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>CRIE SUA CONTA</Title>
+        <Title>ENTRE COM SUA CONTA</Title>
         <Form>
           <Input placeholder="username" />
           <Input placeholder="password" />
