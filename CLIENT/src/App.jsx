@@ -6,15 +6,15 @@ import Login from "./pages/Login";
 import Cart from "./pages/Cart"
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
-  Redirect
+  Navigate
 } from "react-router-dom"
 
 const App = () => {
   const user = true;
   return <Router>
-    <Switch>
+    <Routes>
       <Route exact path="/">
         <Home />
       </Route>
@@ -28,12 +28,12 @@ const App = () => {
         <Cart />
       </Route>
       <Route patch="/login">
-        {user ? <Redirect to="/" /> : <Login />}
+        {user ? <Navigate to="/" /> : <Login />}
       </Route>
       <Route path="/register">
-        {user ? <Redirect to="/" /> : <Register />}
+        {user ? <Navigate to="/" /> : <Register />}
       </Route>
-    </Switch>
+    </Routes>
   </Router>
 };
 
