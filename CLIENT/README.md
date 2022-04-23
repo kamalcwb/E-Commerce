@@ -1,4 +1,4 @@
-![E-COMMERCE](https://github.com/kamalcwb/E-Commerce/blob/main/src/img/WEB/home1.png)
+![E-COMMERCE](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/home1.png)
 <h2>E-COMMERCE</h2>
 
 >Status: :construction: :construction: :construction:EM DESENVOLVIMENTO :construction: :construction: :construction:
@@ -17,22 +17,22 @@
 
 
 ### HOME
-![HOME](https://github.com/kamalcwb/E-Commerce/blob/main/src/img/WEB/Home2.png)
+![HOME](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/Home2.png)
 
 ### LISTA DE PRODUTOS
-![LISTA DE PRODUTOS](https://github.com/kamalcwb/E-Commerce/blob/main/src/img/WEB/ListaDeProdutos.png)
+![LISTA DE PRODUTOS](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/ListaDeProdutos.png)
 
 ### PÁGINA DO PRODUTO
-![PÁGINA DO PRODUTO](https://github.com/kamalcwb/E-Commerce/blob/main/src/img/WEB/Produtos.png)
+![PÁGINA DO PRODUTO](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/Produtos.png)
 
 ### PÁGINA DE REGISTRO
-![PÁGINA DE REGISTRO](https://github.com/kamalcwb/E-Commerce/blob/main/src/img/WEB/Registro.png)
+![PÁGINA DE REGISTRO](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/Registro.png)
 
 ### PÁGINA DE LOGIN
-![PÁGINA DE LOGIN](https://github.com/kamalcwb/E-Commerce/blob/main/src/img/WEB/Login.png)
+![PÁGINA DE LOGIN](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/Login.png)
 
 ### PÁGINA DE CARRINHO DE COMPRAS
-![PÁGINA DE CARRINHO DE COMPRAS](https://github.com/kamalcwb/E-Commerce/blob/main/src/img/WEB/carrinhoDeCompras.png)
+![PÁGINA DE CARRINHO DE COMPRAS](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/carrinhoDeCompras.png)
 
 
 ## Tecnologias utilizadas:
