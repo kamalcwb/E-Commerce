@@ -5,10 +5,8 @@ import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
-import {
-    useLocation,
-    useState,
-} from "react-router-dom";
+import { useState } from "react";
+import { useLocation } from "react-router-dom"
 
 const Container = styled.div``;
 
@@ -42,7 +40,7 @@ const Option = styled.option``;
 
 const ProductList = () => {
     const location = useLocation();
-    const cat = location.pathname.split("/")[2];
+    const cat = location.pathname.split("/");
     const [filters, setFilters] = useState({})
     const [sort, setSort] = useState("novidades")
 
@@ -65,12 +63,12 @@ const ProductList = () => {
                         <Option disabled selected>
                             Cor
                         </Option>
-                        <Option>Branco</Option>
-                        <Option>Preto</Option>
-                        <Option>Vermelho</Option>
-                        <Option>Azul</Option>
-                        <Option>Amarelo</Option>
-                        <Option>Verde</Option>
+                        <Option>branco</Option>
+                        <Option>preto</Option>
+                        <Option>vermelho</Option>
+                        <Option>azul</Option>
+                        <Option>amarelo</Option>
+                        <Option>verde</Option>
                     </Select>
                     <Select name="tamanho" onChange={handleFilters}>
                         <Option disabled selected>
