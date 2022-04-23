@@ -6,7 +6,7 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
 import { useState } from "react";
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router"
 
 const Container = styled.div``;
 
@@ -40,17 +40,17 @@ const Option = styled.option``;
 
 const ProductList = () => {
     const location = useLocation();
-    const cat = location.pathname.split("/");
-    const [filters, setFilters] = useState({})
-    const [sort, setSort] = useState("novidades")
+    const cat = location.pathname.split("/")[2];
+    const [filters, setFilters] = useState({});
+    const [sort, setSort] = useState("novidades");
 
     const handleFilters = (e) => {
         const value = e.target.value;
         setFilters({
             ...filters,
             [e.target.name]: value,
-        })
-    }
+        });
+    };
     return (
         <Container>
             <Navbar />
