@@ -6,7 +6,7 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
 import { useState } from "react";
-import { useLocation } from "react-router"
+import { useLocation } from "react-router-dom"
 
 const Container = styled.div``;
 
@@ -51,6 +51,7 @@ const ProductList = () => {
             [e.target.name]: value,
         });
     };
+
     return (
         <Container>
             <Navbar />
@@ -60,9 +61,7 @@ const ProductList = () => {
                 <Filter>
                     <FilterText>Filtrar Produtos:</FilterText>
                     <Select name="cor" onChange={handleFilters}>
-                        <Option disabled selected>
-                            Cor
-                        </Option>
+                        <Option disabled>Color</Option>
                         <Option>branco</Option>
                         <Option>preto</Option>
                         <Option>vermelho</Option>
@@ -71,9 +70,7 @@ const ProductList = () => {
                         <Option>verde</Option>
                     </Select>
                     <Select name="tamanho" onChange={handleFilters}>
-                        <Option disabled selected>
-                            Tamanho
-                        </Option>
+                        <Option disabled>Tamanho</Option>
                         <Option>PP</Option>
                         <Option>P</Option>
                         <Option>M</Option>
@@ -82,18 +79,18 @@ const ProductList = () => {
                     </Select>
                 </Filter>
                 <Filter>
-                    <FilterText>Filtrar Produtos:</FilterText>
+                    <FilterText>Ordenar Produtos:</FilterText>
                     <Select onChange={(e) => setSort(e.target.value)}>
                         <Option value="novidades">Novidades</Option>
-                        <Option value="menor">Preço (menor)</Option>
-                        <Option value="maior">Preço (maior)</Option>
+                        <Option value="menor">Valor (crescente)</Option>
+                        <Option value="maior">Valor (decrescente)</Option>
                     </Select>
                 </Filter>
             </FilterContainer>
             <Products cat={cat} filters={filters} sort={sort} />
             <Newsletter />
             <Footer />
-        </Container >
+        </Container>
     );
 };
 
