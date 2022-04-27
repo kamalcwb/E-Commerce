@@ -5,9 +5,11 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import { mobile } from "../responsive";
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import publicRequest from "../requestMethods"
+import { publicRequest } from "../requestMethods";
+import { addProduct } from "../Redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 const Container = styled.div``;
 
@@ -113,8 +115,8 @@ const Button = styled.button`
   cursor: pointer;
   font-weight: 500;
 
-  &:hover{
-      background-color: #f8f4f4;
+  &:hover {
+    background-color: #f8f4f4;
   }
 `;
 
@@ -125,6 +127,7 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const getProduct = async () => {
@@ -145,10 +148,10 @@ const Product = () => {
   };
 
   const handleClick = () => {
-
-
+    dispatch(
+      addProduct({ ...product, quantity, color, size })
+    );
   };
-
   return (
     <Container>
       <Navbar />
