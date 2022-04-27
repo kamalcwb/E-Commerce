@@ -5,6 +5,9 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import { mobile } from "../responsive";
+import { useLocation } from "react-router-dom"
+import { useEffect, useState } from "react";
+import publicRequest from "../requestMethods"
 
 const Container = styled.div``;
 
@@ -116,56 +119,71 @@ const Button = styled.button`
 `;
 
 const Product = () => {
+  const location = useLocation();
+  const id = location.pathname.split("/")[2];
+  const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
+  const [color, setColor] = useState("");
+  const [size, setSize] = useState("");
+
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        const res = await publicRequest.get("/products/find/" + id);
+        setProduct(res.data);
+      } catch { }
+    };
+    getProduct();
+  }, [id]);
+
+  const handleQuantity = (type) => {
+    if (type === "dec") {
+      quantity > 1 && setQuantity(quantity - 1);
+    } else {
+      setQuantity(quantity + 1);
+    }
+  };
+
+  const handleClick = () => {
+
+
+  };
+
   return (
     <Container>
       <Navbar />
       <Announcement />
       <Wrapper>
         <ImgContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+          <Image src={product.img} />
         </ImgContainer>
         <InfoContainer>
-          <Title>Macacão Jeans Delavê Denim Claro</Title>
-          <Desc>
-            Macacão confeccionado em jeans com lavagem delavê. Modelo sem manga, conta com decote reto,
-            fechamento frontal por botões, alças com amarração, bolsos frontais e bolsos posteriores. Cheio de estilo,
-            é perfeito para compor looks super descolados. <br /><br />
-            • Bolsos frontais <br /><br />
-            • Alças ajustáveis <br /><br />
-            <strong>JEANS + TRANSPARENTE</strong> <br /><br />
-            <strong>O futuro está em nossas mãos.</strong> O <strong>Jeans + Transparente </strong>
-            representa o início de um novo capítulo na <strong>história</strong> de um ícone da moda. <br /> A responsabilidade
-            com o <strong>meio ambiente</strong> e suas comunidades é o que guia a criação de cada peça.
-            Para produzir cada vez <strong>melhor</strong>, preservamos cada vez mais nossos
-            <strong>recursos naturais</strong>. Esse é o jeito de fazer <strong>moda</strong> em que acreditamos:
-            Nossa forma de <strong>abraçar o planeta</strong> e as gerações que estão por vir.
-          </Desc>
-          <Price>R$ 159,90</Price>
+          <Title>{product.title}</Title>
+          <Desc>{product.desc}</Desc>
+          <Price>R${product.price}</Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Cor</FilterTitle>
-              <FilterColor color="black" />
-              <FilterColor color="darkblue" />
-              <FilterColor color="gray" />
+              {product.color?.map((c) => (
+                <FilterColor color={c} key={c} onClick={() => setColor(c)} />
+              ))}
             </Filter>
             <Filter>
               <FilterTitle>Tamanho</FilterTitle>
-              <FilterSize>
-                <FilterSizeOption>PP</FilterSizeOption>
-                <FilterSizeOption>P</FilterSizeOption>
-                <FilterSizeOption>M</FilterSizeOption>
-                <FilterSizeOption>G</FilterSizeOption>
-                <FilterSizeOption>GG</FilterSizeOption>
+              <FilterSize onChange={(e) => setSize(e.target.value)}>
+                {product.size?.map((s) => (
+                  <FilterSizeOption key={s}>{s}</FilterSizeOption>
+                ))}
               </FilterSize>
             </Filter>
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
-              <Remove />
-              <Amount>1</Amount>
-              <Add />
+              <Remove onClick={() => handleQuantity("menos")} />
+              <Amount>{quantity}</Amount>
+              <Add onClick={() => handleQuantity("mais")} />
             </AmountContainer>
-            <Button>ADICIONAR AO CARRINHO</Button>
+            <Button onClick={handleClick}>ADICIONAR AO CARRINHO</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
