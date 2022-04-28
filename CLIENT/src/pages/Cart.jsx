@@ -182,7 +182,7 @@ const Cart = () => {
       } catch { }
     };
     stripeToken && makeRequest();
-  }, [stripeToken, cart.total, history]);
+  }, [stripeToken, cart.total, history, cart]);
   return (
     <Container>
       <Navbar />
@@ -238,11 +238,11 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Valor do Envio</SummaryItemText>
-              <SummaryItemPrice>R$ 5.90</SummaryItemPrice>
+              <SummaryItemPrice>R$ 25.90</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
-              <SummaryItemText>Disconto de Envio</SummaryItemText>
-              <SummaryItemPrice>$ -5.90</SummaryItemPrice>
+              <SummaryItemText>Desconto de Envio</SummaryItemText>
+              <SummaryItemPrice>$ -25.90</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
@@ -250,7 +250,7 @@ const Cart = () => {
             </SummaryItem>
             <StripeCheckout
               name="BdN"
-              image="https://avatars.githubusercontent.com/u/1486366?v=4"
+              image="https://flyclipart.com/thumb2/coroa-png-sem-665653.png"
               billingAddress
               shippingAddress
               description={`O total da sua compra é R$${cart.total}`}
