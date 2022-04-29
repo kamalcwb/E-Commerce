@@ -11,14 +11,14 @@ export default function WidgetSm() {
       try {
         const res = await userRequest.get("users/?new=true");
         setUsers(res.data);
-      } catch {}
+      } catch { }
     };
     getUsers();
   }, []);
-  
+
   return (
     <div className="widgetSm">
-      <span className="widgetSmTitle">New Join Members</span>
+      <span className="widgetSmTitle">Novos Parceiros</span>
       <ul className="widgetSmList">
         {users.map((user) => (
           <li className="widgetSmListItem" key={user._id}>
