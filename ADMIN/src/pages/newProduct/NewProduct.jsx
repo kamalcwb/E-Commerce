@@ -32,34 +32,36 @@ export default function NewProduct() {
     const storageRef = ref(storage, fileName);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
-    // Register three observers:
-    // 1. 'state_changed' observer, called any time the state changes
-    // 2. Error observer, called on failure
-    // 3. Completion observer, called on successful completion
+    // Registra três observadores:
+    // 1. observador 'state_changed', chamado sempre que o estado muda
+    // 2. Observador de erro, chamado em caso de falha
+    // 3. Observador de conclusão, chamado após conclusão bem-sucedida
     uploadTask.on(
       "state_changed",
       (snapshot) => {
-        // Observe state change events such as progress, pause, and resume
-        // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+
+        // Observe os eventos de mudança de estado, como progresso, pausa e retomada
+        // Obtém o progresso da tarefa, incluindo o número de bytes carregados e o número total de bytes a serem carregados
         const progress =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         console.log("Upload is " + progress + "% done");
         switch (snapshot.state) {
           case "paused":
-            console.log("Upload is paused");
+            console.log("Upload pausado");
             break;
           case "running":
-            console.log("Upload is running");
+            console.log("Fazendo upload");
             break;
           default:
         }
       },
       (error) => {
-        // Handle unsuccessful uploads
+        // Uploads malsucedidos
       },
       () => {
-        // Handle successful uploads on complete
-        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+
+        // Uploads bem-sucedidos
+        // Por exemplo, use a URL de download: https://firebasestorage.googleapis.com/...
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           const product = { ...inputs, img: downloadURL, categories: cat };
           addProduct(product, dispatch);
@@ -70,10 +72,10 @@ export default function NewProduct() {
 
   return (
     <div className="newProduct">
-      <h1 className="addProductTitle">New Product</h1>
+      <h1 className="addProductTitle">Novo produto</h1>
       <form className="addProductForm">
         <div className="addProductItem">
-          <label>Image</label>
+          <label>Imagem</label>
           <input
             type="file"
             id="file"
@@ -81,7 +83,7 @@ export default function NewProduct() {
           />
         </div>
         <div className="addProductItem">
-          <label>Title</label>
+          <label>Titulo</label>
           <input
             name="title"
             type="text"
@@ -90,7 +92,7 @@ export default function NewProduct() {
           />
         </div>
         <div className="addProductItem">
-          <label>Description</label>
+          <label>Descrição</label>
           <input
             name="desc"
             type="text"
@@ -99,7 +101,7 @@ export default function NewProduct() {
           />
         </div>
         <div className="addProductItem">
-          <label>Price</label>
+          <label>Preço</label>
           <input
             name="price"
             type="number"
@@ -108,18 +110,18 @@ export default function NewProduct() {
           />
         </div>
         <div className="addProductItem">
-          <label>Categories</label>
+          <label>Categoria</label>
           <input type="text" placeholder="jeans,skirts" onChange={handleCat} />
         </div>
         <div className="addProductItem">
-          <label>Stock</label>
+          <label>Estoque</label>
           <select name="inStock" onChange={handleChange}>
             <option value="true">Yes</option>
             <option value="false">No</option>
           </select>
         </div>
         <button onClick={handleClick} className="addProductButton">
-          Create
+          Criar
         </button>
       </form>
     </div>
