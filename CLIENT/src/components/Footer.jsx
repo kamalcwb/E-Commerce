@@ -9,6 +9,8 @@ import {
 } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+// import { Link } from "react-router-dom";
+import LogoIMG from "../img/logo.png"
 
 const Container = styled.div`
   display: flex;
@@ -67,6 +69,12 @@ const ListItem = styled.li`
   margin-bottom: 10px;
 `;
 
+const Image = styled.img`
+  width: 80px;
+  margin-bottom: 0px;
+  margin-left: 15px;
+`;
+
 const Right = styled.div`
   flex: 1;
   padding: 20px;
@@ -88,14 +96,15 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>BdN</Logo>
+        <Image src={LogoIMG} />
+        <Logo style={{ fontFamily: "Kings", fontSize: 26, marginTop: "5px" }}>K i n n g s</Logo>
         <Desc>
-          Fundada em 2018, a Branca de Neve é uma loja de design de moda.
-          Sob a Direção de Ana Laura Menegueti desde sua fundação, a BdN  distribui produtos de moda e lifestyle,
+          Fundada em 2018, a Kinngs é uma loja de design de moda.
+          Sob a Direção de "" desde sua fundação, a Kings  distribui produtos de moda e lifestyle,
           incluindo alta costura, pronto-a-vestir feminino e masculino, joias, relógios, acessórios e fragrâncias.
 
-          A marca Branca de Neve representa a moda brasileira, inovação na moda, design icônico e dedicação ao luxo excepcional.
-          A BdN acredita no empoderamento, motivação e crescimento de todos os funcionários.
+          A marca Kinngs representa a moda brasileira, inovação na moda, design icônico e dedicação ao luxo excepcional.
+          A Kinngs acredita no empoderamento, motivação e crescimento de todos os funcionários.
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
@@ -113,8 +122,8 @@ const Footer = () => {
         </SocialContainer>
       </Left>
       <Center>
-        <Title>Links Úteis</Title>
-        <List>
+        <Title style={{ color: "gray" }}>Links Úteis</Title>
+        <List style={{ color: "gray" }}>
           <ListItem>Home</ListItem>
           <ListItem>Carrinho de compras</ListItem>
           <ListItem>Moda Masculina</ListItem>
@@ -127,7 +136,7 @@ const Footer = () => {
           <ListItem>Termos</ListItem>
         </List>
       </Center>
-      <Right>
+      <Right style={{ color: "gray" }}>
         <Title>Contato</Title>
         <ContactItem>
           <Room style={{ marginRight: "10px" }} /> Avenida Presidente Vargas, 2022
@@ -136,7 +145,7 @@ const Footer = () => {
           <Phone style={{ marginRight: "10px" }} /> +55 16 3025-3567
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{ marginRight: "10px" }} /> contato@brancadeneve.com.br
+          <MailOutline style={{ marginRight: "10px" }} /> contato@kinngs.com.br
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>

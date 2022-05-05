@@ -36,6 +36,7 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 25px;
+  margin-bottom: 10px;
   padding: 5px;
 `;
 
@@ -74,20 +75,24 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>PT-BR</Language>
+          <Language style={{ color: "gray", marginBottom: "10px" }}>PT-BR</Language>
           <SearchContainer>
             <Input />
-            <Search style={{ color: "gray", fontSize: 16 }} />
+            <Search style={{ color: "gray", fontSize: 14 }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>BdN</Logo>
+          <Logo style={{ fontFamily: "Kings", fontSize: 26, marginBottom: "10px" }}>K i n n g s</Logo>
         </Center>
         <Right>
-          <MenuItem>Registre-se</MenuItem>
-          <MenuItem>Entrar</MenuItem>
+          <Link to="register">
+            <MenuItem style={{ color: "gray" }}>Registre-se</MenuItem>
+          </Link>
+          <Link to="login">
+            <MenuItem style={{ color: "gray" }}>Entrar</MenuItem>
+          </Link>
           <Link to="cart">
-            <MenuItem>
+            <MenuItem style={{ color: "gray" }}>
               <Badge badgeContent={quantity} color="primary">
                 <ShoppingCartOutlined />
               </Badge>

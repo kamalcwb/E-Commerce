@@ -4,7 +4,7 @@ import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 60vh;
-  background-color: #fcf5f5;
+  background-color: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,18 +42,18 @@ const Input = styled.input`
 const Button = styled.button`
   flex: 1;
   border: none;
-  background-color: teal;
+  background-color: black;
   color: white;
 `;
 
 const Newsletter = () => {
   return (
     <Container>
-      <Title>ENTRE NO MUNDO BRANCA DE NEVE</Title>
+      <Title>ENTRE NO MUNDO KINNGS</Title>
       <Desc>Saiba sobre eventos exclusivos, coleções e novidades.</Desc>
       <InputContainer>
-        <Input placeholder="Seu E-Mail" />
-        <Button>
+        <Input placeholder="Seu email" />
+        <Button >
           <Send />
         </Button>
       </InputContainer>
