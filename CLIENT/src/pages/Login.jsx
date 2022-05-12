@@ -47,12 +47,12 @@ const Button = styled.button`
   width: 40%;
   border: none;
   padding: 15px 20px;
-  background-color: teal;
+  background-color: black;
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
   &:disabled {
-    color: green;
+    color: lightgray;
     cursor: not-allowed;
   }
 `;
@@ -64,15 +64,12 @@ const Link = styled.a`
   cursor: pointer;
 `;
 
-const Error = styled.span`
-  color: red;
-`;
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const { isFetching, error } = useSelector((state) => state.user);
+  const { isFetching } = useSelector((state) => state.user);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -84,7 +81,7 @@ const Login = () => {
         <Title>ENTRAR</Title>
         <Form>
           <Input
-            placeholder="nome de usuário"
+            placeholder="usuario"
             onChange={(e) => setUsername(e.target.value)}
           />
           <Input
@@ -95,9 +92,8 @@ const Login = () => {
           <Button onClick={handleClick} disabled={isFetching}>
             LOGIN
           </Button>
-          {error && <Error>Algo deu errado...</Error>}
-          <Link>ESQUECEU A SENHA?</Link>
-          <Link>CRIAR UMA NOVA CONTA</Link>
+          <Link>ESQUECEU SUA SENHA?</Link>
+          <Link>CRIAR UMA CONTA</Link>
         </Form>
       </Wrapper>
     </Container>
