@@ -258,7 +258,7 @@ const Cart = () => {
               <SummaryItemPrice>R$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout
-              name="BdN"
+              name="K i n n g"
               image="https://flyclipart.com/thumb2/coroa-png-sem-665653.png"
               billingAddress
               shippingAddress
