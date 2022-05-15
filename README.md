@@ -34,6 +34,10 @@
 ### PÁGINA DE CARRINHO DE COMPRAS
 ![PÁGINA DE CARRINHO DE COMPRAS](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/carrinhoDeCompras.png)
 
+### PÁGINA DE ADMINISTRADOR
+![PÁGINA DE ADMIN](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/admin.png)
+
+
 
 ## Tecnologias utilizadas:
  
