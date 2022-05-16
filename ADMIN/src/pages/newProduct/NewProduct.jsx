@@ -87,7 +87,7 @@ export default function NewProduct() {
           <input
             name="title"
             type="text"
-            placeholder="Apple Airpods"
+            placeholder="Airpods Apple"
             onChange={handleChange}
           />
         </div>
@@ -96,7 +96,7 @@ export default function NewProduct() {
           <input
             name="desc"
             type="text"
-            placeholder="description..."
+            placeholder="descrição..."
             onChange={handleChange}
           />
         </div>
@@ -111,7 +111,7 @@ export default function NewProduct() {
         </div>
         <div className="addProductItem">
           <label>Categoria</label>
-          <input type="text" placeholder="jeans,skirts" onChange={handleCat} />
+          <input type="text" placeholder="jeans,camisetas" onChange={handleCat} />
         </div>
         <div className="addProductItem">
           <label>Estoque</label>
