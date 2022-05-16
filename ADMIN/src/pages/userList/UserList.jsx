@@ -11,12 +11,12 @@ export default function UserList() {
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
-  
+
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     {
       field: "user",
-      headerName: "User",
+      headerName: "Usuário",
       width: 200,
       renderCell: (params) => {
         return (
@@ -35,18 +35,18 @@ export default function UserList() {
     },
     {
       field: "transaction",
-      headerName: "Transaction Volume",
+      headerName: "Volume de transações",
       width: 160,
     },
     {
       field: "action",
-      headerName: "Action",
+      headerName: "Açao",
       width: 150,
       renderCell: (params) => {
         return (
           <>
             <Link to={"/user/" + params.row.id}>
-              <button className="userListEdit">Edit</button>
+              <button className="userListEdit">Editar</button>
             </Link>
             <DeleteOutline
               className="userListDelete"

@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "./product.css";
 import Chart from "../../components/chart/Chart";
-import { productData } from "../../dummyData";
+// import { productData } from "../../dummyData";
 import { Publish } from "@material-ui/icons";
 import { useSelector } from "react-redux";
 import { useEffect, useMemo, useState } from "react";
@@ -19,17 +19,17 @@ export default function Product() {
   const MONTHS = useMemo(
     () => [
       "Jan",
-      "Feb",
+      "Fev",
       "Mar",
-      "Apr",
-      "May",
+      "Abr",
+      "Mai",
       "Jun",
       "Jul",
-      "Agu",
-      "Sep",
-      "Oct",
+      "Ago",
+      "Set",
+      "Out",
       "Nov",
-      "Dec",
+      "Dez",
     ],
     []
   );
@@ -38,8 +38,8 @@ export default function Product() {
     const getStats = async () => {
       try {
         const res = await userRequest.get("orders/income?pid=" + productId);
-        const list = res.data.sort((a,b)=>{
-            return a._id - b._id
+        const list = res.data.sort((a, b) => {
+          return a._id - b._id
         })
         list.map((item) =>
           setPStats((prev) => [
@@ -57,14 +57,14 @@ export default function Product() {
   return (
     <div className="product">
       <div className="productTitleContainer">
-        <h1 className="productTitle">Product</h1>
+        <h1 className="productTitle">Produto</h1>
         <Link to="/newproduct">
-          <button className="productAddButton">Create</button>
+          <button className="productAddButton">Criar</button>
         </Link>
       </div>
       <div className="productTop">
         <div className="productTopLeft">
-          <Chart data={pStats} dataKey="Sales" title="Sales Performance" />
+          <Chart data={pStats} dataKey="Sales" title="Performance de vendas" />
         </div>
         <div className="productTopRight">
           <div className="productInfoTop">
@@ -77,11 +77,11 @@ export default function Product() {
               <span className="productInfoValue">{product._id}</span>
             </div>
             <div className="productInfoItem">
-              <span className="productInfoKey">sales:</span>
+              <span className="productInfoKey">vendas:</span>
               <span className="productInfoValue">5123</span>
             </div>
             <div className="productInfoItem">
-              <span className="productInfoKey">in stock:</span>
+              <span className="productInfoKey">Estoque:</span>
               <span className="productInfoValue">{product.inStock}</span>
             </div>
           </div>
@@ -90,16 +90,16 @@ export default function Product() {
       <div className="productBottom">
         <form className="productForm">
           <div className="productFormLeft">
-            <label>Product Name</label>
+            <label>Nome Produto</label>
             <input type="text" placeholder={product.title} />
-            <label>Product Description</label>
+            <label>Descrição do Produto</label>
             <input type="text" placeholder={product.desc} />
-            <label>Price</label>
+            <label>Preço</label>
             <input type="text" placeholder={product.price} />
-            <label>In Stock</label>
+            <label>Estoque</label>
             <select name="inStock" id="idStock">
-              <option value="true">Yes</option>
-              <option value="false">No</option>
+              <option value="true">Sim</option>
+              <option value="false">Não</option>
             </select>
           </div>
           <div className="productFormRight">
@@ -110,7 +110,7 @@ export default function Product() {
               </label>
               <input type="file" id="file" style={{ display: "none" }} />
             </div>
-            <button className="productButton">Update</button>
+            <button className="productButton">Atualizar</button>
           </div>
         </form>
       </div>
