@@ -128,8 +128,8 @@ export const productRows = [
     img:
       "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     stock: 123,
-    status: "active",
-    price: "$120.00",
+    status: "ativo",
+    price: "R$120.00",
   },
   {
     id: 2,
@@ -137,8 +137,8 @@ export const productRows = [
     img:
       "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     stock: 123,
-    status: "active",
-    price: "$120.00",
+    status: "ativo",
+    price: "R$120.00",
   },
   {
     id: 3,
@@ -146,8 +146,8 @@ export const productRows = [
     img:
       "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     stock: 123,
-    status: "active",
-    price: "$120.00",
+    status: "ativo",
+    price: "R$120.00",
   },
   {
     id: 4,
@@ -155,8 +155,8 @@ export const productRows = [
     img:
       "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     stock: 123,
-    status: "active",
-    price: "$120.00",
+    status: "ativo",
+    price: "R$120.00",
   },
   {
     id: 5,
@@ -164,8 +164,8 @@ export const productRows = [
     img:
       "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     stock: 123,
-    status: "active",
-    price: "$120.00",
+    status: "ativo",
+    price: "R$120.00",
   },
   {
     id: 6,
@@ -173,8 +173,8 @@ export const productRows = [
     img:
       "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     stock: 123,
-    status: "active",
-    price: "$120.00",
+    status: "ativo",
+    price: "R$120.00",
   },
   {
     id: 7,
@@ -182,8 +182,8 @@ export const productRows = [
     img:
       "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     stock: 123,
-    status: "active",
-    price: "$120.00",
+    status: "ativo",
+    price: "R$120.00",
   },
   {
     id: 8,
@@ -191,8 +191,8 @@ export const productRows = [
     img:
       "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     stock: 123,
-    status: "active",
-    price: "$120.00",
+    status: "ativo",
+    price: "R$120.00",
   },
   {
     id: 9,
@@ -200,8 +200,8 @@ export const productRows = [
     img:
       "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     stock: 123,
-    status: "active",
-    price: "$120.00",
+    status: "ativo",
+    price: "R$120.00",
   },
   {
     id: 10,
@@ -209,7 +209,7 @@ export const productRows = [
     img:
       "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     stock: 123,
-    status: "active",
-    price: "$120.00",
+    status: "ativo",
+    price: "R$120.00",
   },
 ];
