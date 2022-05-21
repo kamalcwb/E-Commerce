@@ -14,6 +14,7 @@
 + Pagina para registro de conta
 + Página de login de conta
 + Página de carrinho de compras
++ Página de Administrador
 
 
 ### HOME
