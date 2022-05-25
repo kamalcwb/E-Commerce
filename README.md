@@ -27,7 +27,7 @@
 ![PÁGINA DO PRODUTO](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/Produtos.png)
 
 ### PÁGINA DE REGISTRO
-![PÁGINA DE REGISTRO](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/Registro.png)
+![PÁGINA DE REGISTRO](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/Register.png)
 
 ### PÁGINA DE LOGIN
 ![PÁGINA DE LOGIN](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/Login.png)
