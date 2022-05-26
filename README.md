@@ -39,6 +39,8 @@
 ![PÁGINA DE ADMIN](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/admin.png)
 
 
+### PÁGINA DE ADMIN (GERENCIAMENTO DE USUARIOS)
+![ADMIN USUARIOS](https://github.com/kamalcwb/E-Commerce/blob/main/CLIENT/src/img/WEB/admin_Contas.png)
 
 ## Tecnologias utilizadas:
  
