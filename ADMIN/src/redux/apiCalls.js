@@ -63,3 +63,33 @@ export const addProduct = async (product, dispatch) => {
     dispatch(addProductFailure());
   }
 };
+
+export const getUsers = async (dispatch) => {
+  dispatch(getUsersStart());
+  try {
+    const res = await publicRequest.get("/products");
+    dispatch(getUsertSuccess(res.data));
+  } catch (err) {
+    dispatch(getUsertFailure());
+  }
+};
+
+export const deleteUser = async (id, dispatch) => {
+  dispatch(deleteUsertStart());
+  try {
+    // const res = await userRequest.delete(`/products/${id}`);
+    dispatch(deleteUserSuccess(id));
+  } catch (err) {
+    dispatch(deleteUserFailure());
+  }
+};
+
+export const updateUser = async (id, product, dispatch) => {
+  dispatch(updateUserStart());
+  try {
+    // update
+    dispatch(updateUserSuccess({ id, product }));
+  } catch (err) {
+    dispatch(updateUserFailure());
+  }
+};
