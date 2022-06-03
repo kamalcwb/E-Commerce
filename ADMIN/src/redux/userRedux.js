@@ -22,8 +22,65 @@ const userSlice = createSlice({
     logout: (state) => {
       state.currentUser = null;
     },
+    //BUSCAR
+    getUserStart: (state) => {
+      state.isFetching = true;
+      state.error = false;
+    },
+    getUserSuccess: (state, action) => {
+      state.isFetching = false;
+      state.currentUser = action.payload;
+    },
+    getUserFailure: (state) => {
+      state.isFetching = false;
+      state.error = true;
+    },
+    //DELETAR
+    deleteUserStart: (state) => {
+      state.isFetching = true;
+      state.error = false;
+    },
+    deleteUserSuccess: (state, action) => {
+      state.isFetching = false;
+      state.currentUser.splice(
+        state.currentUser.findIndex((item) => item._id === action.payload),
+        1
+      );
+    },
+    deleteUserFailure: (state) => {
+      state.isFetching = false;
+      state.error = true;
+    },
+    //ATT
+    updateUserStart: (state, action) => {
+      state.isFetching = true;
+      state.error = false;
+    },
+    updateUserSuccess: (state, action) => {
+      state.isFetching = false;
+      state.currentUser[
+        state.currentUser.findIndex((item) => item._id === action.payload.id)
+      ] = action.payload.currentUser;
+    },
+    updateUserFailure: (state) => {
+      state.isFetching = false;
+      state.error = true;
+    }
   },
 });
 
-export const { loginStart, loginSuccess, loginFailure } = userSlice.actions;
+export const {
+  loginStart,
+  loginSuccess,
+  loginFailure,
+  getUserStart,
+  getUserSuccess,
+  getUserFailure,
+  deleteUserStart,
+  deleteUserSuccess,
+  deleteUserFailure,
+  updateUserStart,
+  updateUserSuccess,
+  updateUserFailure
+} = userSlice.actions;
 export default userSlice.reducer;
