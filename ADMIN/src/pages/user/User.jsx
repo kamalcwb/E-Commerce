@@ -8,13 +8,13 @@ import {
 } from "@material-ui/icons";
 import "./user.css";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+
 import { Link, useLocation } from "react-router-dom";
 
 export default function User() {
   const location = useLocation();
   const userId = location.pathname.split("/")[2];
-  const [uStats, setUStats] = useState([]);
+
 
   const user = useSelector((state) =>
     state.user.users.find((user) => user._id === userId)
