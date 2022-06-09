@@ -251,7 +251,7 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Desconto de Envio</SummaryItemText>
-              <SummaryItemPrice>$ -25.90</SummaryItemPrice>
+              <SummaryItemPrice>R$ -25.90</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
