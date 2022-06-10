@@ -6,7 +6,9 @@ const Container = styled.div`
 
 const WishList = () => {
     return (
-        <div>WishList</div>
+        <Container>
+            WHISHLIST
+        </Container>
     )
 }
 
